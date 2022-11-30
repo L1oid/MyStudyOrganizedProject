@@ -32,7 +32,7 @@ export default (function() {
         user.setUser(login, password, undefined);
         let result = await user.authQuery();
         if (result.status == 200) {
-            localStorage.setItem('AutoSellUserToken', JSON.stringify(result.data));
+            localStorage.setItem('MyStudyOrganizedUserToken', JSON.stringify(result.data));
             if (document.getElementById('errLogin') != null) {
                 document.getElementById('loginDiv').removeChild(document.getElementById('errLogin'));
             }
@@ -73,7 +73,7 @@ export default (function() {
         let div = document.createElement('div');
         div.id = 'loginDiv';
         div.className = 'div-loginPageDisplay WrapCenteredInlineBlock';
-        let header = document.createTextNode('AutoSell');
+        let header = document.createTextNode('MyStudyOrganized');
         div.appendChild(header);
         
         let p1 = document.createElement('p');
@@ -132,7 +132,7 @@ export default (function() {
     }
 
     function renderPage() {
-        if (localStorage.getItem('AutoSellUserToken') == null) {
+        if (localStorage.getItem('MyStudyOrganizedUserToken') == null) {
             loginPageDisplay();
         }
         else {

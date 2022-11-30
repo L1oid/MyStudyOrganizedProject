@@ -5,6 +5,14 @@ public class User {
     private String password;
     private String email;
 
+    public void setLogin(String Login) {
+        this.login = Login;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
     public void setPassword(String password) {
         this.password = password;
     }
@@ -19,13 +27,5 @@ public class User {
 
     public String getEmail() {
         return email;
-    }
-
-    public String getLogin() {
-        return login;
-    }
-
-    public void setLogin(String Login) {
-        this.login = Login;
     }
 }
